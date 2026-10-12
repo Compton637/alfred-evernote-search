@@ -1,0 +1,4 @@
+.DS_Store
+*.alfredworkflow
+# Alfred stores each user's own settings for a workflow in this file
+prefs.plist

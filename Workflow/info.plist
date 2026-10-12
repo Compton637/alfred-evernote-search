@@ -1,0 +1,438 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>bundleid</key>
+	<string>com.github.compton637.evernote-search</string>
+	<key>category</key>
+	<string>Productivity</string>
+	<key>connections</key>
+	<dict>
+		<key>4515758E-412F-44F0-9300-32676AEFB231</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>58381F93-3727-4114-A5B9-D6DDF4F02A77</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>7588BFAC-F3C4-4E60-B3E7-04E7073B0CDE</string>
+				<key>modifiers</key>
+				<integer>1048576</integer>
+				<key>modifiersubtext</key>
+				<string>Open note on evernote.com</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>4386504A-CC95-45F2-ABAD-349AFF204978</string>
+				<key>modifiers</key>
+				<integer>524288</integer>
+				<key>modifiersubtext</key>
+				<string>Copy link to note</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>6F52C676-9BE9-407C-9B05-0ECCB20AE8D0</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>58381F93-3727-4114-A5B9-D6DDF4F02A77</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>7588BFAC-F3C4-4E60-B3E7-04E7073B0CDE</string>
+				<key>modifiers</key>
+				<integer>1048576</integer>
+				<key>modifiersubtext</key>
+				<string>Open note on evernote.com</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>4386504A-CC95-45F2-ABAD-349AFF204978</string>
+				<key>modifiers</key>
+				<integer>524288</integer>
+				<key>modifiersubtext</key>
+				<string>Copy link to note</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+	</dict>
+	<key>createdby</key>
+	<string>Compton637</string>
+	<key>description</key>
+	<string>Search your Evernote notes without an API key</string>
+	<key>disabled</key>
+	<false/>
+	<key>name</key>
+	<string>Evernote Search</string>
+	<key>objects</key>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<true/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>1</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>keyword</key>
+				<string>{var:keyword}</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>2</integer>
+				<key>runningsubtext</key>
+				<string>Searching…</string>
+				<key>script</key>
+				<string>exec /bin/bash ./search.sh all "$1"</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>skipuniversalaction</key>
+				<true/>
+				<key>subtext</key>
+				<string>Titles, text, tags, notebooks and attachments</string>
+				<key>title</key>
+				<string>Search Evernote</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>4515758E-412F-44F0-9300-32676AEFB231</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<true/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>1</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>keyword</key>
+				<string>{var:keyword_titles}</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>2</integer>
+				<key>runningsubtext</key>
+				<string>Searching…</string>
+				<key>script</key>
+				<string>exec /bin/bash ./search.sh titles "$1"</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>skipuniversalaction</key>
+				<true/>
+				<key>subtext</key>
+				<string>Note titles only</string>
+				<key>title</key>
+				<string>Search Evernote Titles</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>6F52C676-9BE9-407C-9B05-0ECCB20AE8D0</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>/usr/bin/open "$1"</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>58381F93-3727-4114-A5B9-D6DDF4F02A77</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>/usr/bin/open "$1"</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>7588BFAC-F3C4-4E60-B3E7-04E7073B0CDE</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>autopaste</key>
+				<false/>
+				<key>clipboardtext</key>
+				<string>{query}</string>
+				<key>ignoredynamicplaceholders</key>
+				<false/>
+				<key>transient</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.clipboard</string>
+			<key>uid</key>
+			<string>4386504A-CC95-45F2-ABAD-349AFF204978</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+	</array>
+	<key>readme</key>
+	<string>## Setup
+
+The workflow reads the database which the Evernote app keeps on your Mac. When macOS asks if Alfred may access data from other apps, choose Allow. If the workflow reports that it is not allowed to read Evernote’s data, grant Alfred Full Disk Access in System Settings → Privacy &amp; Security.
+
+## Usage
+
+Search your Evernote notes via the `ens` keyword. It looks in titles, note text, tags, notebook names, and the text of attachments.
+
+* &lt;kbd&gt;↩&lt;/kbd&gt; Open note in Evernote.
+* &lt;kbd&gt;⌘&lt;/kbd&gt;&lt;kbd&gt;↩&lt;/kbd&gt; Open note on evernote.com.
+* &lt;kbd&gt;⌥&lt;/kbd&gt;&lt;kbd&gt;↩&lt;/kbd&gt; Copy link to note.
+
+Search note titles only via the `ent` keyword.
+
+Type several words to narrow the results. Put a star in front of a word to find it inside longer words: `*port` finds `airport`. Use either keyword without words to list the notes changed most recently.
+
+Searching attachments and matching every word inside longer words can be turned off in the Workflow’s Configuration. If the Mac holds more than one Evernote account, choose the database file there as well; otherwise the most recently modified database is searched.
+
+Up to 40 notes are shown and the first eight words are used. Matching inside longer words covers titles and note text.
+
+Notes are read from Evernote’s local database, so no API key or network access is needed and only notes synced to this Mac are found. The database is opened read-only and is never locked, so Evernote is not held up. In return, a search made at the moment Evernote saves can show incomplete results; the workflow then searches again and says so if Evernote is still saving. Evernote does not document the database, so an Evernote update may require a workflow update.
+
+Requires Alfred 5. Tested with Evernote 11.35 from the Mac App Store. This workflow is not affiliated with or endorsed by Evernote.
+</string>
+	<key>uidata</key>
+	<dict>
+		<key>4386504A-CC95-45F2-ABAD-349AFF204978</key>
+		<dict>
+			<key>note</key>
+			<string>⌥↩ Copy link to note</string>
+			<key>xpos</key>
+			<real>380.0</real>
+			<key>ypos</key>
+			<real>350.0</real>
+		</dict>
+		<key>4515758E-412F-44F0-9300-32676AEFB231</key>
+		<dict>
+			<key>note</key>
+			<string>Everything: titles, text, tags, notebooks, attachments</string>
+			<key>xpos</key>
+			<real>60.0</real>
+			<key>ypos</key>
+			<real>110.0</real>
+		</dict>
+		<key>58381F93-3727-4114-A5B9-D6DDF4F02A77</key>
+		<dict>
+			<key>note</key>
+			<string>↩ Open note in Evernote</string>
+			<key>xpos</key>
+			<real>380.0</real>
+			<key>ypos</key>
+			<real>60.0</real>
+		</dict>
+		<key>6F52C676-9BE9-407C-9B05-0ECCB20AE8D0</key>
+		<dict>
+			<key>note</key>
+			<string>Titles only</string>
+			<key>xpos</key>
+			<real>60.0</real>
+			<key>ypos</key>
+			<real>300.0</real>
+		</dict>
+		<key>7588BFAC-F3C4-4E60-B3E7-04E7073B0CDE</key>
+		<dict>
+			<key>note</key>
+			<string>⌘↩ Open note on evernote.com</string>
+			<key>xpos</key>
+			<real>380.0</real>
+			<key>ypos</key>
+			<real>205.0</real>
+		</dict>
+	</dict>
+	<key>userconfigurationconfig</key>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>default</key>
+				<string>ens</string>
+				<key>placeholder</key>
+				<string>ens</string>
+				<key>required</key>
+				<true/>
+				<key>trim</key>
+				<true/>
+			</dict>
+			<key>description</key>
+			<string>Searches titles, note text, tags, notebook names and attachments.</string>
+			<key>label</key>
+			<string>Search Keyword</string>
+			<key>type</key>
+			<string>textfield</string>
+			<key>variable</key>
+			<string>keyword</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>default</key>
+				<string>ent</string>
+				<key>placeholder</key>
+				<string>ent</string>
+				<key>required</key>
+				<true/>
+				<key>trim</key>
+				<true/>
+			</dict>
+			<key>description</key>
+			<string>Searches note titles only.</string>
+			<key>label</key>
+			<string>Title Search Keyword</string>
+			<key>type</key>
+			<string>textfield</string>
+			<key>variable</key>
+			<string>keyword_titles</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>default</key>
+				<true/>
+				<key>required</key>
+				<false/>
+				<key>text</key>
+				<string>Search the text inside attachments</string>
+			</dict>
+			<key>description</key>
+			<string>Uses the text Evernote has extracted from PDFs and scanned images. Does not apply to the title search.</string>
+			<key>label</key>
+			<string>Attachments</string>
+			<key>type</key>
+			<string>checkbox</string>
+			<key>variable</key>
+			<string>search_attachments</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>default</key>
+				<true/>
+				<key>required</key>
+				<false/>
+				<key>text</key>
+				<string>Also find a word inside longer words</string>
+			</dict>
+			<key>description</key>
+			<string>For words of three or more letters. For example, port also finds airport. Whatever you choose here, a star in front of a word does the same for that word: *port.</string>
+			<key>label</key>
+			<string>Inside words</string>
+			<key>type</key>
+			<string>checkbox</string>
+			<key>variable</key>
+			<string>match_inside_words</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>default</key>
+				<string></string>
+				<key>placeholder</key>
+				<string>Automatic</string>
+				<key>required</key>
+				<false/>
+				<key>trim</key>
+				<true/>
+			</dict>
+			<key>description</key>
+			<string>Leave empty to use the most recently modified Evernote database on this Mac. Set it to search a specific one, for example with several Evernote accounts.</string>
+			<key>label</key>
+			<string>Database file</string>
+			<key>type</key>
+			<string>textfield</string>
+			<key>variable</key>
+			<string>database_path</string>
+		</dict>
+	</array>
+	<key>version</key>
+	<string>1.3.0</string>
+	<key>webaddress</key>
+	<string>https://github.com/Compton637/alfred-evernote-search</string>
+</dict>
+</plist>
